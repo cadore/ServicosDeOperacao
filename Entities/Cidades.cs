@@ -8,10 +8,6 @@ namespace Siscom.Entities
 {
     public class Cidades
     {
-        public override string ToString()
-        {
-            return this.cidade;
-        }
         public long id { get; set; }
 
         public string cidade { get; set; }
@@ -25,5 +21,11 @@ namespace Siscom.Entities
         public List<Bairros> bairros { get; set; }
 
         public List<Enderecos> enderecos { get; set; }
+
+
+        public override string ToString()
+        {
+            return this.cidade;
+        }
     }
 }

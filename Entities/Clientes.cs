@@ -18,7 +18,7 @@
 
         public string email_secundario { get; set; }
 
-        public Enderecos endereco { get; set; }
+        public long id_cidades { get; set; }
 
         public string numero { get; set; }
 
@@ -26,9 +26,9 @@
 
         public string cep { get; set; }
 
-        public Bairros bairro { get; set; }
+        public long id_enderecos { get; set; }
 
-        public Cidades cidade { get; set; }
+        public long id_bairros { get; set; }
 
         public string observacoes { get; set; }
 
@@ -40,6 +40,13 @@
 
         public decimal limite_de_credito { get; set; }
 
-        public bool fornecedor { get; set; }
+        public Enderecos endereco_instc { get; set; }
+        public Bairros bairro_instc { get; set; }
+        public Cidades cidade_instc { get; set; }
+
+        public override string ToString()
+        {
+            return this.nome;
+        }
     }
 }

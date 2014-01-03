@@ -21,5 +21,10 @@
         public bool acesso_inativo { get; set; }
 
         public bool inativo { get; set; }
+
+        public override string ToString()
+        {
+            return this.nome;
+        }
     }
 }

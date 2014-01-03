@@ -6,19 +6,19 @@ namespace Siscom.Entities
 {
     public class Enderecos
     {
-        public override string ToString()
-        {
-            return this.endereco;
-        }
         public long id { get; set; }
 
         public string cep { get; set; }
 
         public string endereco { get; set; }
 
-        public Cidades cidade { get; set; }
+        public long id_cidades { get; set; }        
 
         public long bairro_id { get; set; }
+
+        public Cidades cidade_instc { get; set; }
+
+        
 
     }
 }
