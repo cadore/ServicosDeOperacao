@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class EnderecosDAO : IEnderecosDAO
+    public class EnderecosDAO
     {
     }
 }

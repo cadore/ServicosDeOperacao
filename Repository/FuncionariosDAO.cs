@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class FuncionariosDAO : IFuncionariosDAO
+    public class FuncionariosDAO
     {
+
     }
 }

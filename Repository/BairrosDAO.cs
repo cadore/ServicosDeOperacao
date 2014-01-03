@@ -3,13 +3,10 @@ using ServicoDeOperacaoClienteUsuarios.Util;
 using Siscom.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class BairrosDAO : IBairrosDAO
+    public class BairrosDAO
     {       
         private static string GET_ALL_STATMENT = @"SELECT id, bairro FROM bairro;";
 
@@ -42,8 +39,8 @@ namespace Repository
         #endregion
 
         #region Metodo recuperar 1 registro por id
-        //id, centro_de_custo
-        public Bairros recuperarPorId(long idCC)
+        //SELECT id, bairro FROM bairro WHERE id=:condition;
+        public Bairros recuperarPorId(long id)
         {
             NpgsqlConnection conn = null;
             NpgsqlCommand stmt = null;
@@ -55,7 +52,7 @@ namespace Repository
             {
                 conn = GerenteDeConexoes.getConnection();
                 stmt = new NpgsqlCommand(GET_ALL_POR_ID, conn);
-                stmt.Parameters.AddWithValue("condition", idCC);
+                stmt.Parameters.AddWithValue("condition", id);
 
                 dr = stmt.ExecuteReader();
 
@@ -85,7 +82,7 @@ namespace Repository
         #endregion
 
         #region Metodo converte datareader para list<T>
-        //id, centro_de_custo
+        //SELECT id, bairro FROM bairro;
         private List<Bairros> converteParaLista(NpgsqlDataReader dr)
         {
             List<Bairros> lista = new List<Bairros>();

@@ -51,12 +51,6 @@
     <Compile Include="EnderecosDAO.cs" />
     <Compile Include="EstadosDAO.cs" />
     <Compile Include="FuncionariosDAO.cs" />
-    <Compile Include="IBairrosDAO.cs" />
-    <Compile Include="ICidadeDAO.cs" />
-    <Compile Include="IClientesDAO.cs" />
-    <Compile Include="IEnderecosDAO.cs" />
-    <Compile Include="IEstadosDAO.cs" />
-    <Compile Include="IFuncionariosDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\FilesINI.cs" />
     <Compile Include="Util\GerenteDeConexoes.cs" />
