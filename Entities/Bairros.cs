@@ -7,6 +7,8 @@ namespace Siscom.Entities
 
         public string bairro { get; set; }
 
+        public long id_cidades { get; set; }
+
         public Cidades cidade_instc { get; set; }
 
         public override string ToString()
