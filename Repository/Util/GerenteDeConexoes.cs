@@ -1,6 +1,6 @@
 ﻿using Npgsql;
 using System;
-namespace ServicoDeOperacaoClienteUsuarios.Util
+namespace Repository
 {
         public class GerenteDeConexoes
         {
