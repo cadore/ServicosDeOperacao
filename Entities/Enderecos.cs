@@ -18,7 +18,9 @@ namespace Siscom.Entities
 
         public Cidades cidade_instc { get; set; }
 
-        
-
+        public override string ToString()
+        {
+            return this.endereco;
+        }
     }
 }

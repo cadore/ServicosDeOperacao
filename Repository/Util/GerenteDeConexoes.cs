@@ -7,7 +7,7 @@ namespace Repository
 
             //Informacões para conexão com banco de dados POSTGRES.
             private static string DATABASE = "siscomdb";
-            private static string STR_SERVER = "127.0.0.1";
+            private static string STR_SERVER = "localhost";
             private static string USER = "postgres";
             private static string PASSWORD = "p@ssw0rd";
             private static string PORT = "5432";

@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace ServerPrint
+namespace HostTest.Util
 {
     public class FilesINI
     {
@@ -14,22 +14,9 @@ namespace ServerPrint
         [DllImport("kernel32.dll", EntryPoint = "WritePrivateProfileString")]
         private static extern bool WritePrivateProfileString(string lpAppName, string lpKeyName, string lpString, string lpFileName);
 
-       static string iniFile = Path.Combine(Directory.GetCurrentDirectory(), "config.ini");
+        static string iniFile = Path.Combine(Directory.GetCurrentDirectory(), "config.ini");
 
-        public static string getCaminhoArquivoINI(string caminhoArquivo)
-        {
-            if (caminhoArquivo.IndexOf("\\bin\\Debug") != -1)
-            {
-                caminhoArquivo = caminhoArquivo.Replace("\\bin\\Debug", "");
-            }
-            else if (caminhoArquivo.IndexOf("\\bin\\Release") != -1)
-            {
-                caminhoArquivo = caminhoArquivo.Replace("\\bin\\Release", "");
-            }
-            return caminhoArquivo;
-        }
-
-        public static String GetINIValue(string section, string key)
+        public static String ReadValue(string section, string key)
         {
             return _GetIniValue(section, key, iniFile);
         }
@@ -39,9 +26,9 @@ namespace ServerPrint
             WritePrivateProfileString(section, Key, Value, iniFile);
         }
 
-        public static string _GetIniValue(string section, string key, string nomeArquivo)
+        private static string _GetIniValue(string section, string key, string nomeArquivo)
         {
-            const int chars = 256;
+            const int chars = 1024;
             StringBuilder buffer = new StringBuilder(chars);
             const string sDefault = "";
             if (GetPrivateProfileString(section, key, sDefault, buffer, chars, nomeArquivo) != 0)

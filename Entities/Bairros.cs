@@ -1,5 +1,4 @@
-﻿
-namespace Siscom.Entities
+﻿namespace Siscom.Entities
 {
     public class Bairros
     {
@@ -14,6 +13,7 @@ namespace Siscom.Entities
         public override string ToString()
         {
             return this.bairro;
-        }
+        }     
+
     }
 }

@@ -39,7 +39,7 @@
             this.btnStartStop.Name = "btnStartStop";
             this.btnStartStop.Size = new System.Drawing.Size(404, 44);
             this.btnStartStop.TabIndex = 0;
-            this.btnStartStop.Text = "Start service";
+            this.btnStartStop.Text = "Stop service";
             this.btnStartStop.UseVisualStyleBackColor = true;
             this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
             // 
@@ -57,9 +57,9 @@
             this.lbStatus.AutoSize = true;
             this.lbStatus.Location = new System.Drawing.Point(53, 69);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(87, 13);
+            this.lbStatus.Size = new System.Drawing.Size(81, 13);
             this.lbStatus.TabIndex = 2;
-            this.lbStatus.Text = "Service stopped.";
+            this.lbStatus.Text = "Service started.";
             // 
             // Form1
             // 
