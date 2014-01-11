@@ -1,4 +1,5 @@
-﻿namespace Siscom.Entities
+﻿using System;
+namespace Siscom.Entities
 {
     public class Clientes
     {
@@ -47,6 +48,11 @@
         public override string ToString()
         {
             return this.nome;
+        }
+        public static Clientes ToClientes(Object o)
+        {
+            Clientes c = (Clientes)o;
+            return c;
         }
     }
 }

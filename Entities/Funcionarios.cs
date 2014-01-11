@@ -1,4 +1,5 @@
-﻿namespace Siscom.Entities
+﻿using System;
+namespace Siscom.Entities
 {
     public class Funcionarios
     {
@@ -25,6 +26,11 @@
         public override string ToString()
         {
             return this.nome;
+        }
+        public static Funcionarios ToFuncionarios(Object o)
+        {
+            Funcionarios c = (Funcionarios)o;
+            return c;
         }
     }
 }

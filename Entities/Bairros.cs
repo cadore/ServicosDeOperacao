@@ -1,4 +1,5 @@
-﻿namespace Siscom.Entities
+﻿using System;
+namespace Siscom.Entities
 {
     public class Bairros
     {
@@ -13,7 +14,11 @@
         public override string ToString()
         {
             return this.bairro;
-        }     
-
+        }
+        public static Bairros ToCidades(Object o)
+        {
+            Bairros c = (Bairros) o;
+            return c;
+        }
     }
 }

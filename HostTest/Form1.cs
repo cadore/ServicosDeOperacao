@@ -8,7 +8,7 @@ namespace HostTest
 {
     public partial class Form1 : Form
     {
-        private string status = "stopped";
+        private string status = "started";
         private ServiceHost vHost;
   
         public Form1()

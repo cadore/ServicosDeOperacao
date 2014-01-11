@@ -22,5 +22,11 @@ namespace Siscom.Entities
         {
             return this.endereco;
         }
+
+        public static Enderecos ToEnderecos(Object o)
+        {
+            Enderecos c = (Enderecos)o;
+            return c;
+        }
     }
 }

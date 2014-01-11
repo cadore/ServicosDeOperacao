@@ -21,5 +21,11 @@ namespace Siscom.Entities
         {
             return this.estado;
         }
+
+        public static Estados ToEstados(Object o)
+        {
+            Estados c = (Estados)o;
+            return c;
+        }
     }
 }

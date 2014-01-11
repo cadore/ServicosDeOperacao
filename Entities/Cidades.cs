@@ -22,10 +22,15 @@ namespace Siscom.Entities
 
         public List<Enderecos> enderecos { get; set; }
 
-
         public override string ToString()
         {
             return this.cidade;
+        }
+
+        public static Cidades ToCidades(Object o)
+        {
+            Cidades c = (Cidades)o;
+            return c;
         }
     }
 }
